@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styles.css'
 
 function Form() {
@@ -17,11 +18,11 @@ function Form() {
                 <h3>"The Witcher"</h3>
                 <form className="moviereviews-form">
                     <div className="form-group moviereviews-form-group">
-                        <label htmlFor="email">Informe seu email</label>
+                        <label htmlFor="email">Inform your email</label>
                         <input type="email" className="form-control" id="email" />
                     </div>
                     <div className="form-group moviereviews-form-group">
-                        <label htmlFor="score">Informe sua avaliação</label>
+                        <label htmlFor="score">Inform your review</label>
                         <select className="form-control" id="score">
                             <option>1</option>
                             <option>2</option>
@@ -31,10 +32,12 @@ function Form() {
                         </select>
                     </div>
                     <div className="moviereviews-form-btn-container">
-                        <button type="submit" className="btn btn-primary moviereviews-btn">Salvar</button>
+                        <button type="submit" className="btn btn-primary moviereviews-btn">Save</button>
                     </div>
                 </form >
-                <button className="btn btn-primary moviereviews-btn mt-3">Cancelar</button>
+                <Link to="/">
+                    <button className="btn btn-primary moviereviews-btn mt-3">Cancel</button>
+                </Link>
             </div >
         </div >
     );
